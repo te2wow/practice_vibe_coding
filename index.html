@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>シンプルピアノ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .piano-container {
+            text-align: center;
+        }
+        
+        .piano {
+            display: flex;
+            position: relative;
+            margin: 20px auto;
+            height: 200px;
+        }
+        
+        .white-key {
+            width: 60px;
+            height: 200px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+        }
+        
+        .black-key {
+            width: 40px;
+            height: 120px;
+            background-color: black;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+        }
+        
+        .white-key:active, .white-key.active {
+            background-color: #ddd;
+        }
+        
+        .black-key:active, .black-key.active {
+            background-color: #333;
+        }
+        
+        .note-label {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .black-key .note-label {
+            color: white;
+            bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="piano-container">
+        <h1>シンプルピアノ</h1>
+        <div class="piano" id="piano"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
